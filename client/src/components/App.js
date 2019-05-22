@@ -9,6 +9,7 @@ import { loadUser } from "../actions/authActions";
 import setAuthToken from "../utils/setAuthToken";
 
 import "../App.css";
+import Navbar from "./layout/Navbar";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -23,6 +24,7 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Fragment>
+          <Navbar />
           <Switch>
             <Route exact path="/register" component={Register} />
           </Switch>
