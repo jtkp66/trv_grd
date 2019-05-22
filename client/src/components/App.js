@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "../components/auth/Register";
+import Login from "../components/auth/Login";
 
 // Redux
 import { Provider } from "react-redux";
@@ -27,6 +28,7 @@ const App = () => {
           <Navbar />
           <Switch>
             <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
           </Switch>
         </Fragment>
       </Router>
